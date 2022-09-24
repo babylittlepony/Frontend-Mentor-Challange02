@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <script defer src="index.js"></script>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" id="nav">
+        <img src="./images/logo-bookmark.svg" alt="" class="logo-bookmark" id="logoBookmark"/>
+        <img
+            src="./images/icon-hamburger.svg"
+            alt=""
+            onclick="openNav()"
+            class="icon-hamburger"
+            id="openNav"
+          />
+        <div class="nav-overlay" id="myNav">
+          <a
+            href="javascript:void(0)"
+            class="closebtn"
+            id="btnclose"
+            onclick="closeNav()"
+          />&times;</a>
+          <ul class="navbar-content">
+            <a href="#feature"><li>FEATURES</li></a>
+            <li>PRICING</li>
+            <a href="#contact"><li>CONTACT</li></a>
+            <li class="border">LOGIN</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <img src="./images/illustration-hero.svg" alt="" />
+        <div class="desc">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>
+            A clean and simple interface to organize your favourite websites. Open
+            a new browser tab and see your sites load instantly. Try it for free.
+          </p>
+          <button class="btn-chrome">Get it on Chrome</button>
+          <button class="btn-firefox">Get it on Firefox</button>
+        </div>
+      </section>
+      <section class="features" id="feature">
+        <h1>Features</h1>
+        <p>
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+        <ul class="tab">
+          <li
+            class="tab-link"
+            onclick="openTab(event, 'tab-one')"
+            id="defaultOpen"
+          >
+            <span>Simple Bookmarking</span>
+            <!-- <div class="border"></div> -->
+          </li>
+          <li class="tab-link" onclick="openTab(event, 'tab-two')">
+            <span>Speedy Searching</span>
+          </li>
+          <li class="tab-link" onclick="openTab(event, 'tab-three')">
+            <span>Easy Sharing</span>
+          </li>
+        </ul>
+        <div id="tab-one" class="tab-content">
+          <img src="./images/illustration-features-tab-1.svg" alt="" />
+          <div class="tab-desc">
+
+            <h1>Bookmark in one click</h1>
+            <p>
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button class="btn-info">More Info</button>
+          </div>
+        </div>
+        <div id="tab-two" class="tab-content">
+          <img src="./images/illustration-features-tab-2.svg" alt="" />
+          <div class="tab-desc">
+
+            <h1>Intelligent search</h1>
+            <p>
+              Our powerful search feature will help you find saved sites in no
+              time at all. No need to trawl through all of your bookmarks.
+            </p>
+            <button class="btn-info">More Info</button>
+          </div>
+        </div>
+        <div id="tab-three" class="tab-content">
+          <img src="./images/illustration-features-tab-3.svg" alt="" />
+          <div class="tab-desc">
+
+            <h1>Share your bookmarks</h1>
+            <p>
+              Easily share your bookmarks and collections with others. Create a
+              shareable link that you can send at the click of a button.
+            </p>
+            <button class="btn-info">More Info</button>
+          </div>
+        </div>
+      </section>
+      <section class="extension">
+        <div class="extension-desc">
+          <h1>Download the extension</h1>
+          <p>
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+        </div>
+        <ul>
+          <li class="extension-card">
+            <img src="./images/logo-chrome.svg" alt="" class="extension-img" />
+            <h1>Add to Chrome</h1>
+            <p>Minimum version 62</p>
+            <img src="./images/bg-dots.svg" alt="" class="dot" />
+            <button class="btn-ext">Add & Install Extension</button>
+          </li>
+          <li class="extension-card">
+            <img src="./images/logo-firefox.svg" alt="" />
+            <h1>Add to Firefox</h1>
+            <p>Minimum version 55</p>
+            <img src="./images/bg-dots.svg" alt="" class="dot" />
+            <button class="btn-ext">Add & Install Extension</button>
+          </li>
+          <li class="extension-card">
+            <img src="./images/logo-opera.svg" alt="" />
+            <h1>Add to Opera</h1>
+            <p>Minimum version 46</p>
+            <img src="./images/bg-dots.svg" alt="" class="dot" />
+            <button class="btn-ext">Add & Install Extension</button>
+          </li>
+        </ul>
+      </section>
+      <section class="faq">
+        <h1>Frequently Asked Questions</h1>
+        <p>
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+        <ul class="dropdown-list">
+          <li>
+            <p class="dropdown" onclick="dropdown(1)">
+              What is Bookmark? <img src="./images/icon-arrow.svg" alt="" />
+            </p>
+            <div class="dropdown-content" id="drop1">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                tincidunt justo eget ultricies fringilla. Phasellus blandit
+                ipsum quis quam ornare mattis.
+              </p>
+            </div>
+          </li>
+          <li>
+            <p class="dropdown" onclick="dropdown(2)">
+              How can I request a new browser?
+              <span><img src="./images/icon-arrow.svg" alt="" /></span>
+            </p>
+            <div class="dropdown-content" id="drop2">
+              <p>
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                luctus eros aliquet convallis ultricies. Mauris augue massa,
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
+                aliquet convallis ultricies. Mauris augue massa, ultricies non
+                ligula. Suspendisse imperdiet.
+              </p>
+            </div>
+          </li>
+          <li>
+            <p class="dropdown" onclick="dropdown(3)">
+              Is there a mobile app?
+              <span><img src="./images/icon-arrow.svg" alt="" /></span>
+            </p>
+          </li>
+          <div class="dropdown-content" id="drop3">
+            <p>
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </p>
+          </div>
+          <li>
+            <p class="dropdown" onclick="dropdown(4)">
+              What about other Chromium browsers?
+              <span><img src="./images/icon-arrow.svg" alt="" /></span>
+            </p>
+            <div class="dropdown-content" id="drop4">
+              <p>
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                gravida pellentesque non ut velit. More Info 35,000+ already
+                joined Stay up-to-date with what we’re doing Contact Us Features
+                Pricing Contact
+              </p>
+            </div>
+          </li>
+        </ul>
+        <button class="btn-info">More Info</button>
+      </section>
+      <section class="contact" id="contact">
+        <div class="contact-content">
+          <p class="l-spacing">35.000+ ALREADY JOINED</p>
+          <p class="l-bold">Stay up-to-date with what we're doing</p>
+          <div class="email">
+            <input
+              type="email"
+              name="email"
+              id="email-input"
+              placeholder="Enter your email address"
+            />
+            <button class="btn-contact">Contact Us</button>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-list">
+          <ul>
+            <!-- <li class="logo">
+              <img src="./images/logo-bookmark.svg" alt="" />
+            </li> -->
+            <li>FEATURES</li>
+            <li>PRICING</li>
+            <li>CONTACT</li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <img src="./images/icon-facebook.svg" alt="" />
+          <img src="./images/icon-twitter.svg" alt="" />
+        </div>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="">babylittlepony</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
