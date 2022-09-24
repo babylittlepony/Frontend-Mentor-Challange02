@@ -48,21 +48,8 @@ button {
 button:hover {
   cursor: pointer;
 }
-.btn-info {
-  padding: 1rem;
-  border-radius: 8px;
-}
-/* NAVBAR */
-.navbar {
-  margin: 1.5rem;
-  padding-bottom: 2rem;
-}
-/* .navbar ul {
-  position: fixed;
-  top: 1.5rem;
-  right: 0;
-} */
 
+/* MEDIA */
 @media only screen and (max-width: 810px) {
   a {
     color: white;
@@ -359,7 +346,17 @@ button:hover {
 }
 /* MEDIA */
 
+.btn-info {
+  padding: 1rem;
+  border-radius: 8px;
+}
 /* NAVBAR */
+.navbar {
+  margin: 1.5rem;
+  padding-bottom: 2rem;
+}
+/* NAVBAR */
+
 main {
   text-align: center;
 }
@@ -372,12 +369,10 @@ main {
 }
 .btn-chrome {
   position: relative;
-  /* right: 5rem; */
 }
 .btn-chrome,
 .btn-firefox {
   padding: 0.6rem;
-  /* margin: 1rem; */
   max-width: 100%;
   border-radius: 5px;
   box-shadow: 5px 10px 8px 0 rgba(0, 0, 0, 0.105);
@@ -395,30 +390,7 @@ main {
 .features {
   min-height: 100vh;
   padding-bottom: 4rem;
-  /* margin: 0 1.2rem; */
 }
-/* .tab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 80%;
-  overflow: hidden;
-  padding-bottom: 3rem;
-  width: 80%;
-  margin: 0 auto;
-}
-.tab-link {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  border: 1px solid var(--clr-neutral-Grayish-Blue);
-  border-left: none;
-  border-right: none;
-  padding: 0.5rem 0;
-  position: relative;
-} */
 .tab-link span {
   font-size: 1.23rem;
   color: var(--clr-neutral-Grayish-Blue);
@@ -427,16 +399,6 @@ main {
   cursor: pointer;
   color: black;
 }
-/* .tab-link .border {
-  background: rgb(245, 103, 103);
-  max-width: inherit;
-  margin: 0 5rem;
-  padding: 3px 50px;
-  position: absolute;
-  right: 150px;
-  bottom: 0;
-  border-radius: 5px;
-} */
 .tab-content {
   animation: fadeEffect 1s;
 }
@@ -493,9 +455,6 @@ main {
 /* EXTENSION */
 
 /* FAQ */
-.faq {
-  /* min-height: 150vh; */
-}
 .dropdown {
   position: relative;
   color: black;
